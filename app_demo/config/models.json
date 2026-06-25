@@ -1,0 +1,126 @@
+{
+  "models": [
+    {
+      "id": "vieisl_lite_tcn_bigru",
+      "name": "ISLR Lite TCN-BiGRU",
+      "task": "islr",
+      "architecture": "lite_tcn_bigru_islr",
+      "checkpoint": "../model/notebook9/vieisl_lite_tcn_bigru_islr_scratch/best_model.pt",
+      "label_map": "../model/notebook9/vieisl_lite_tcn_bigru_islr_scratch/id_to_label.json",
+      "config_path": "../model/notebook9/vieisl_lite_tcn_bigru_islr_scratch/config.json",
+      "recommended": true,
+      "metric_note": "VieISL test Top-1 98.15%, Top-5 100.00%, Macro-F1 97.53%. Fastest strong ISLR option for demo."
+    },
+    {
+      "id": "vieisl_pipeline_islr_regularized",
+      "name": "ISLR Pipeline Regularized",
+      "task": "islr",
+      "architecture": "pipeline_islr",
+      "checkpoint": "../model/notebook7/vieisl_pipeline_islr_regularized/best_model.pt",
+      "label_map": "../model/notebook7/vieisl_pipeline_islr_regularized/id_to_label.json",
+      "config_path": "../model/notebook7/vieisl_pipeline_islr_regularized/config.json",
+      "metric_note": "VieISL test Top-1 98.15%, Top-5 99.54%, Macro-F1 97.61%. Strong regularized multi-stream ISLR branch."
+    },
+    {
+      "id": "vieisl_lstm_attention",
+      "name": "ISLR LSTM-Attention",
+      "task": "islr",
+      "architecture": "lstm_attention_islr",
+      "checkpoint": "../model/notebook12/vieisl_lstm_attention_islr_scratch/best_model.pt",
+      "label_map": "../model/notebook12/vieisl_lstm_attention_islr_scratch/id_to_label.json",
+      "config_path": "../model/notebook12/vieisl_lstm_attention_islr_scratch/config.json",
+      "metric_note": "VieISL test Top-1 96.76%, Top-5 99.54%, Macro-F1 95.76%. Compact temporal baseline."
+    },
+    {
+      "id": "vieisl_mska_plus_islr",
+      "name": "ISLR MSKA++",
+      "task": "islr",
+      "architecture": "mska_plus_islr",
+      "checkpoint": "../model/notebook8/vieisl_mska_plus_islr_scratch/best_model.pt",
+      "label_map": "../model/notebook8/vieisl_mska_plus_islr_scratch/id_to_label.json",
+      "config_path": "../model/notebook8/vieisl_mska_plus_islr_scratch/config.json",
+      "metric_note": "VieISL test Top-1 93.98%, Top-5 99.07%, Macro-F1 93.06%. Heavier attention-based ISLR branch."
+    },
+    {
+      "id": "viecsl_pipeline_phoenix_finetune",
+      "name": "CSLR Pipeline PHOENIX->VieCSL",
+      "task": "cslr",
+      "architecture": "pipeline_cslr",
+      "checkpoint": "../model/notebook5/pipeline_phoenix_to_viecsl_finetune_v3_deletion_tuned/best_model.pt",
+      "vocab": "../model/notebook5/pipeline_phoenix_to_viecsl_finetune_v3_deletion_tuned/vocab.json",
+      "config_path": "../model/notebook5/pipeline_phoenix_to_viecsl_finetune_v3_deletion_tuned/config.json",
+      "recommended": true,
+      "metric_note": "VieCSL best current Vietnamese CSLR branch: Dev WER 62.68%, Test WER 69.33%. Still research-stage, suitable for near real-time demo only."
+    },
+    {
+      "id": "viecsl_pipeline_scratch",
+      "name": "CSLR Pipeline Scratch",
+      "task": "cslr",
+      "architecture": "pipeline_cslr",
+      "checkpoint": "../model/notebook1/viecsl_pipeline_scratch/best_model.pt",
+      "vocab": "../model/notebook1/viecsl_pipeline_scratch/vocab.json",
+      "config_path": "../model/notebook1/viecsl_pipeline_scratch/config.json",
+      "metric_note": "VieCSL scratch baseline: Dev WER 82.04%, Test WER 88.67%. Useful for comparison."
+    },
+    {
+      "id": "viecsl_mska_plus_scratch",
+      "name": "CSLR MSKA++ Scratch",
+      "task": "cslr",
+      "architecture": "mska_plus_cslr",
+      "checkpoint": "../model/notebook2/viecsl_mska_plus_scratch/best_model.pt",
+      "vocab": "../model/notebook2/viecsl_mska_plus_scratch/vocab.json",
+      "config_path": "../model/notebook2/viecsl_mska_plus_scratch/config.json",
+      "metric_note": "VieCSL MSKA++ scratch: Dev WER 89.44%, Test WER 92.33%. Included for full experiment coverage."
+    },
+    {
+      "id": "viecsl_mska_plus_phoenix_finetune",
+      "name": "CSLR MSKA++ PHOENIX->VieCSL",
+      "task": "cslr",
+      "architecture": "mska_plus_cslr",
+      "checkpoint": "../model/notebook6/mska_plus_phoenix_to_viecsl_finetune/best_model.pt",
+      "vocab": "../model/notebook6/mska_plus_phoenix_to_viecsl_finetune/vocab.json",
+      "config_path": "../model/notebook6/mska_plus_phoenix_to_viecsl_finetune/config.json",
+      "metric_note": "VieCSL MSKA++ PHOENIX finetune: Dev WER 70.07%, Test WER 77.00%. Deletion remains high."
+    },
+    {
+      "id": "vieisl_lite_to_viecsl",
+      "name": "CSLR Lite TCN-BiGRU ISLR->VieCSL",
+      "task": "cslr",
+      "architecture": "lite_tcn_bigru_cslr",
+      "checkpoint": "../model/notebook10/vieisl_lite_to_viecsl_ctc_finetune/best_model.pt",
+      "vocab": "../model/notebook10/vieisl_lite_to_viecsl_ctc_finetune/vocab.json",
+      "config_path": "../model/notebook10/vieisl_lite_to_viecsl_ctc_finetune/config.json",
+      "metric_note": "VieISL-to-VieCSL Lite transfer: Dev WER 89.79%, Test WER 91.33%. Mostly comparison evidence."
+    },
+    {
+      "id": "vieisl_pipeline_to_viecsl",
+      "name": "CSLR Pipeline ISLR->VieCSL",
+      "task": "cslr",
+      "architecture": "pipeline_cslr",
+      "checkpoint": "../model/notebook11/vieisl_pipeline_to_viecsl_ctc_finetune_v2_classifier_init/best_model.pt",
+      "vocab": "../model/notebook11/vieisl_pipeline_to_viecsl_ctc_finetune_v2_classifier_init/vocab.json",
+      "config_path": "../model/notebook11/vieisl_pipeline_to_viecsl_ctc_finetune_v2_classifier_init/config.json",
+      "metric_note": "VieISL-to-VieCSL Pipeline transfer v2: Dev WER 97.54%, Test WER 98.67%. Included as a negative transfer case."
+    },
+    {
+      "id": "vieisl_mska_plus_to_viecsl",
+      "name": "CSLR MSKA++ ISLR->VieCSL",
+      "task": "cslr",
+      "architecture": "mska_plus_cslr",
+      "checkpoint": "../model/notebook13/vieisl_mska_plus_to_viecsl_ctc_finetune/best_model.pt",
+      "vocab": "../model/notebook13/vieisl_mska_plus_to_viecsl_ctc_finetune/vocab.json",
+      "config_path": "../model/notebook13/vieisl_mska_plus_to_viecsl_ctc_finetune/config.json",
+      "metric_note": "VieISL-to-VieCSL MSKA++ transfer: Dev WER 90.14%, Test WER 93.33%. Included for transfer comparison."
+    },
+    {
+      "id": "vieisl_lstm_to_viecsl",
+      "name": "CSLR LSTM-Attention ISLR->VieCSL",
+      "task": "cslr",
+      "architecture": "lstm_attention_cslr",
+      "checkpoint": "../model/notebook14/vieisl_lstm_attention_to_viecsl_ctc_finetune/best_model.pt",
+      "vocab": "../model/notebook14/vieisl_lstm_attention_to_viecsl_ctc_finetune/vocab.json",
+      "config_path": "../model/notebook14/vieisl_lstm_attention_to_viecsl_ctc_finetune/config.json",
+      "metric_note": "VieISL-to-VieCSL LSTM-Attention transfer: Dev WER 96.13%, Test WER 106.33%. Included to show transfer limitation."
+    }
+  ]
+}

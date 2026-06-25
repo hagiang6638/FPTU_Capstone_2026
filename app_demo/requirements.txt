@@ -1,0 +1,9 @@
+streamlit>=1.56
+streamlit-webrtc==0.72.1
+av==16.1.0
+opencv-python>=4.13
+mediapipe==0.10.9
+numpy>=1.24
+scipy>=1.10
+torch>=2.1
+pillow>=10

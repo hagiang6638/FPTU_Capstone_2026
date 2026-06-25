@@ -1,0 +1,7 @@
+{
+  "source_task": "VieISL isolated sign recognition",
+  "target_task": "VieCSL continuous sign recognition",
+  "model_name": "pipeline_islr",
+  "transfer_feature_dim": null,
+  "recommended_transfer": "Load encoder_state_for_transfer.pt, initialize the matching encoder, remove pooling/classification, and attach a CTC head for gloss-sequence prediction."
+}
